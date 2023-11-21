@@ -3,6 +3,18 @@
 @import url("./containers_and_frames.css");
 @import url("./buttons.css");
 
+body {
+  cursor: url("../assets/cursor/yugicursor.png"), default;
+}
+
+button,
+a,
+img:hover,
+button:hover,
+a:hover {
+  cursor: url("../assets/cursor/yamiyugicursorGLOW.png"), auto;
+}
+
 .bg-video {
   position: absolute;
   z-index: -2;
@@ -43,6 +55,7 @@
   width: 35%;
   min-width: 18rem;
   height: 100vh;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -92,37 +105,55 @@
 .card-versus-container {
   display: flex;
   flex-direction: column;
+  justify-items: center;
+  /* justify-content: center; */
+  align-content: center;
   padding-top: 0.1rem;
   height: 18rem;
-  margin-top: 5rem;
 }
 
 .versus-top,
 .versus-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.versus-bottom{
-    margin-top: 1rem;
+.versus-bottom {
+  margin-top: 1rem;
 }
 
-#next-duel{
-    display: none;
+#next-duel {
+  display: none;
 }
 
-.card-box{
-    height: 9rem;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+.card-box {
+  height: 9rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.card-infield{
-    height: 11.2rem;
-    width: 8rem;
-    /* border-radius: 0.5rem; */
+.card-infield {
+  height: 11.2rem;
+  width: 8rem;
+  /* border-radius: 0.5rem; */
+}
+
+.card-infield > img {
+  border: none;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.debug {
+  border: solid 1px red;
 }
